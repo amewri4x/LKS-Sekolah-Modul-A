@@ -1,0 +1,14 @@
+zone "nusantara.id" {
+    type master;                            //FORWARD
+    file "/etc/bind/db.nusantara";
+};
+
+zone "1.0.10.in-addr.arpa" {
+    type master;                            //REVERSE
+    file "/etc/bind/db.int";
+};
+
+zone "2.0.10.in-addr.arpa" {
+    type master;                            //REVERSE FOR DMZ
+    file "/etc/bind/db.dmz";
+};
